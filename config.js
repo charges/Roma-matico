@@ -1,6 +1,6 @@
 const APP_CONFIG = {
-  appName: "Rome-O-Matic",
-  backendBase: "https://rome-o-matic-backend.onrender.com"
+  appName: "Roma-matico",
+  backendBase: "https://roma-matico-backend.onrender.com"
 };
 
 const API_URL = `${APP_CONFIG.backendBase}/api/articles`;
