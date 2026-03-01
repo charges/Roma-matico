@@ -90,14 +90,21 @@
       return await resp.json(); // expects { topics:[{key, seedCategories, deepcatQueries}] }
     };
 
-    const prettyLabelFromKey = (key) => {
-      // Example: "rome-churches-early" -> "Rome — Churches Early"
-      const parts = String(key).split("-");
-      if (!parts.length) return key;
-      const head = parts[0] ? parts[0][0].toUpperCase() + parts[0].slice(1) : "Argomento";
-      const tail = parts.slice(1).map(s => s ? (s[0].toUpperCase() + s.slice(1)) : s).join(" ");
-      return `${head} — ${tail || key}`;
-    };
+const TOPIC_LABELS_IT = {
+  "all": "Tutti gli argomenti",
+  "sonnet": "Sonetto",
+
+  "rome-churches-early": "Roma — Chiese (origini)",
+  "rome-churches-renaissance": "Roma — Chiese (Rinascimento/Barocco)",
+  "rome-ancient-sites": "Roma — Siti dell’antichità",
+  "rome-museums": "Roma — Musei",
+  "rome-palazzi": "Roma — Palazzi",
+  "rome-monuments": "Roma — Monumenti",
+  "rome-public-places": "Roma — Luoghi pubblici",
+  "rome-architecture": "Roma — Architettura"
+};
+
+const prettyLabelFromKey = (key) => TOPIC_LABELS_IT[key] || key;
 
     /**
      * =========================
