@@ -1,8 +1,8 @@
 {
-  "name": "Rome-O-Matic",
-  "short_name": "Rome-O",
-  "description": "Your personalized Rome article feed.",
-  "start_url": "/Rome-O-Matic/",
+  "name": "Roma-matic",
+  "short_name": "Roma-matico",
+  "description": "Argomenti di Roma.",
+  "start_url": "/Roma-matic",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1e40af",
